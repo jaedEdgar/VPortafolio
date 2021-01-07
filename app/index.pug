@@ -1,0 +1,30 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    meta(http-equiv="X-UA-Compatible" content="ie=edge")
+    title Portafolio
+    script(src="https://unpkg.com/@lottiefiles/lottie-player@0.4.0/dist/lottie-player.js")
+    script(src="https://unpkg.com/@lottiefiles/lottie-interactivity@latest/dist/lottie-interactivity.min.js")
+  body
+    div(style="height: 900vh; background:#0f0e18")
+      lottie-player#firstLottie(src="https://assets6.lottiefiles.com/packages/lf20_5vlul592.json" background="transparent" speed="1" style="height: 100vh; width: 100vh;")
+      #container.container
+        #content.content
+    script(src="src/index.js")
+    script(src="https://unpkg.com/@lottiefiles/lottie-interactivity@latest/dist/lottie-interactivity.min.js")
+    script(src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js")
+    script.
+      LottieInteractivity.create({
+        mode: "scroll",
+        player: "#firstLottie",
+        container: "#content",
+          actions: [
+          {
+            visibility: [0, 1],
+            type: "seek",
+            frames: [1, 300]
+          }
+        ]
+      });
